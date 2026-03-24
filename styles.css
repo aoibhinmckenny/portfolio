@@ -1,0 +1,514 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+    --bg-color: #e8e8e8;
+    --second-bg-color: #5e8f96;
+    --text-color: rgb(36, 36, 36);
+    --main-color: #2e7d97;
+
+    /*
+    --bg-color: #080808;
+    --second-bg-color: #101010;
+    --text-color: white;
+    --main-color: #2e7d97; */
+}
+
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 4rem 15%;
+    /*background-color: rgba(0,0,0,0.3); */
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+#menu-icon{
+    font-size: 3.5rem;
+    color: var(--main-color);
+    display: none;
+}
+
+.logo{
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+span{
+    background: linear-gradient(
+        270deg, 
+        rgb(52, 124, 160) 10%,
+        rgb(152, 195, 215) 100%
+    );
+    background-clip: text;
+    color: transparent;
+}
+
+.navbar a{
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    border-bottom: 1.5px solid transparent;
+}
+.navbar a:hover{
+    color: var(--main-color);
+    border-bottom: 1.5px solid var(--main-color);
+}
+
+.gradient-btn{
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border-radius: 4rem;
+    background: linear-gradient(
+        270deg, 
+        rgb(52, 124, 160) 10%,
+        rgb(152, 195, 215) 70%
+    );
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    color: var(--text-color);
+    border: none;
+    text-wrap: nowrap;
+}
+
+.gradient-btn:hover{
+    transform: scale(1.05);
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 15%;
+}
+
+.home{
+    display:flex;
+    justify-content: center;
+    gap: 15rem;
+    padding-right: 0%;
+    padding-top: 12rem;
+}
+
+.home-content{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    justify-content: center;
+}
+
+.home-content h1{
+    font-size: 8rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height:1;
+}
+
+.home-content h3{
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+.home-content p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.home-img {
+    overflow: hidden;
+    
+    margin-bottom: -10rem;
+    
+}
+
+.home-img video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+video {
+  cursor: pointer;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    padding: 1rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem 0.5rem;
+    transition: 0.3 ease-in-out;
+}
+
+.social-icons a:hover{
+    color: var(--text-color);
+    background-color: var(--main-color);
+    transform: scale(1.2) ;
+}
+
+/*
+.btn{
+    padding: 1rem 3rem;
+    background-color: var(--main-color);
+    border-radius: 3rem;
+    font-size: 1.8rem;
+}*/
+
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    background: var(--second-bg-color)
+}
+
+.about-img img{
+    width: 32vw;
+    border-radius: 50%;
+}
+
+.about-content h2{
+    font-size: 7rem;
+    text-align: left;
+}
+
+.about-content p{
+    font-size: 1.8rem;
+}
+
+.about-content .btn{
+    margin: 7rem 0;
+    padding: 1rem 3rem;
+    background-color: var(--main-color);
+    border-radius: 3rem;
+    font-size: 1.8rem;
+}
+
+/*PROJECTS*/
+.white{
+    background-color: var(--bg-color);
+}
+.blue{
+    background-color: var(--second-bg-color);
+}
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.project h2{
+    font-size: 4rem;
+}
+
+.project h3{
+    font-size: 2rem;
+}
+
+.project p{
+    margin: 1rem;
+}
+
+.project{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 11rem;
+}
+
+/*PODCAST*/
+.podcast{
+    display: flex;
+    flex-direction: row;
+    gap: 30px
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.player-container{
+    margin-top: 15rem;
+    width: 400px;
+    height: 600px;
+    background: var(--bg-color);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.album-art{
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.album-art img{
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.info{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.title{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.artist{
+    font-size: 1.6rem;
+    color: grey;
+}
+
+.progress-section{
+    width: 300px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.progress-bar{
+    width: 295px;
+    height: 6px;
+    background-color: #e0e0e0;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+
+.progress-fill{
+    width: 0%;
+    height: 100%;
+    background: #4a90e2;
+    border-radius: 3px;
+    position: relative;
+}
+
+.progress-dot{
+    width: 14px;
+    height: 14px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position:absolute;
+    right: -7px;
+    top: -4px;
+}
+
+.time-info{
+    display: flex;
+    justify-content: space-between; 
+    font-size: 1.4rem;
+    margin: -1rem;
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.control-btn{
+    width:50px;
+    height:50px;
+    border: none;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.control-btn:hover{
+    transform: scale(1.04);
+}
+
+/*LIVE BRIEF*/
+
+.brief{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.brief img{
+    width: 70rem;
+}
+
+
+/*PROJECTS*/
+
+.projects{
+    padding-top: 11.5rem;
+}
+
+.projects h1{
+    font-size: 6rem;
+    margin-bottom: 10px;
+}
+
+.projects-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+
+    align-items: stretch;
+   
+}
+
+.project-card{
+    display: flex;
+    flex-direction: column; 
+    background-color: var(--bg-color);
+    border-radius: 3rem;
+    gap: 0.5rem;
+    padding: 2rem 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--second-bg-color);
+    transition: 0.3s ease;
+
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: inherit;
+
+    width:100%;
+    height: 100%;
+    
+}
+
+.project-card:hover{
+    transform: scale(1.02);
+}
+
+.project-card img{
+    max-height: 230px;
+    border-radius: 0.7rem;
+}
+
+.project-card h3{
+    font-size: 3rem;
+}
+
+.project-card h4{
+    font-size: 1.5rem;
+}
+
+.project-card p{
+    font-size: 1.6rem;
+}
+
+/*DROPDOWN MENU*/
+
+
+.navbar .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar .dropbtn {
+    text-decoration: none;
+    color: inherit;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+}
+
+.navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    
+    background-color: #fff; /* adjust to match your theme */
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.navbar .dropdown-content a {
+    color: #333; /* text color */
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    display: block;
+    margin-left: 0rem;
+}
+
+.navbar .dropdown-content a:hover {
+    background-color: #f0f0f0;
+}
+
+.navbar .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar .dropdown:hover .dropbtn {
+    color: #0077cc; /* or any highlight color */
+}
+
+/*FOOTER*/
+
+footer{
+    padding: 20px;
+    font-size: 1.5rem;
+}
