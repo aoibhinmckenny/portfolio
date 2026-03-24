@@ -575,6 +575,75 @@ i.bx-image-add{
 /*FOOTER*/
 
 footer{
-    padding: 20px;
+    padding: 40px 0;
     font-size: 1.5rem;
+}
+
+footer.social-icons{
+    text-align: center;
+}
+
+footer ul{
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+footer ul li{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+footer ul li a{
+    border-bottom: 3px solid transparent;
+    transition: 0.3 ease-in-out
+}
+
+footer ul li a:hover{
+     border-bottom: 2px solid var(--main-color);
+}
+
+footer .copyright{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+/*CONTACT FORM*/
+.contact {
+
+}
+
+.contact h2{
+    margin-bottom: 3rem; 
+    font-size: 4rem;
+}
+
+.submit-btn{
+    font-size: 1.8rem;
+    padding: 1rem;
+    border-radius: 30px;
+    border: none;
+}
+
+.submit-btn:hover{
+    transform: scale(1.03);
+}
+
+.contact form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: 5rem;
+    text-align: center;
+}
+
+.contact form .input-box input, .contact form textarea{
+    width:100%;
+    padding:2.5rem;
+    font-size: 1.8rem;
+    border-radius: 2rem;
+    margin: 1.5rem 0;
+    resize: none;
+    border: none;
 }
