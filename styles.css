@@ -109,6 +109,7 @@ span{
 section{
     min-height: 100vh;
     padding: 10rem 15%;
+    scroll-margin-top: 10rem;
 }
 
 .home{
