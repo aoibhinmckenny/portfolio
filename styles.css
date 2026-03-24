@@ -524,6 +524,11 @@ i.bx-image-add{
     padding-bottom: 1.7rem;
 }
 
+/*Live Brief*/
+.brief{
+    flex-direction: column;
+}
+
 
 
 
