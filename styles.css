@@ -35,7 +35,7 @@ body{
     width: 100%;
     top: 0;
     left: 0;
-    padding: 4rem 15%;
+    padding: 4rem 10%;
     /*background-color: rgba(0,0,0,0.3); */
     backdrop-filter: blur(10px);
     display: flex;
@@ -109,7 +109,7 @@ span{
 section{
     min-height: 100vh;
     padding: 10rem 15%;
-    scroll-margin-top: 10rem;
+    scroll-margin-top: 11rem;
 }
 
 .home{
